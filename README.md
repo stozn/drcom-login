@@ -1,5 +1,7 @@
 # DRCOM上网登录
 
+目前仅宿舍登录
+
 ## Linux
 
 ```shell
@@ -7,13 +9,10 @@
 wget -O ~/login.sh https://raw.githubusercontent.com/stozn/drcom-login/refs/heads/main/login.sh
 chmod +x ~/login.sh
 
-# 修改账号和密码
+# **自行修改账号和密码**
 
-# 打开编辑crontab
-crontab -e
-
-# 添加下面这行，每10分钟执行一次脚本
-*/10 * * * * ~/login.sh
+# 直接将定时任务写入crontab，每10分钟执行一次脚本
+(crontab -l 2>/dev/null; echo "*/10 * * * * ~/login.sh") | crontab -
 ```
 
 ## Windows

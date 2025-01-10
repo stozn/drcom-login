@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 # 替换为你的账号和密码
 ACCOUNT="你的账号"
